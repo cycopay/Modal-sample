@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>This is a page to simulate the merchants website</p>
+    <button onclick="payNow()">
+        PAY NOW
+    </button>
+    <script src="https://cdn.cycopay.com/bundle.js"></script>
+    <script>
+        // merchant supplies these data
+        const options = {
+            amount: 1.8,
+            fullName: "John Doe", //optional, it autofills the data once included
+            email: "John.Doe@test.com", //optional, it autofills the data once included
+            apiKey: "meow",
+            webhookURL: "https://www.google.com/",
+            successURL: "https://www.google.com/",
+            failureURL: "https://www.google.com/",
+            description: "Sample modal description"
+        }
+        const payNow = () => {
+            payWithCycoPay(options)
+        }
+    </script>
+</body>
+
+</html>
